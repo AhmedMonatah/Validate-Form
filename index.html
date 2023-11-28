@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <input type="text" id="input">
+    <input type="submit" id="submit" onclick="validate()">
+    <p id="output"></p>
+    <script>
+        function validate(){
+            let inputValue=document.getElementById('input').value;
+            const message=document.getElementById('output');
+            message.innerHTML='';
+            try{
+            if(inputValue.trim()=="")
+            throw "this is empty";
+            if(inputValue<5)
+            throw "this is low";
+            if(inputValue>10)
+            throw "this is high";
+            if(isNaN(inputValue))
+            throw "is not a number";
+            inputValue=Number(inputValue);
+            }catch(err){
+                message.innerHTML= "the output is "+err;
+            }
+           
+        }
+    </script>
+</body>
+
+</html>

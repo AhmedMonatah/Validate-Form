@@ -1,0 +1,18 @@
+body{
+    background-color: blanchedalmond;
+}
+#input{
+border-radius: 7px;
+border-color: rgb(225, 168, 98);
+
+}
+#submit{
+    border-radius: 8px;
+    background-color: beige;
+    
+}
+#submit:hover{
+    transform: scale(1.1);
+    background-color: rgb(179, 179, 47);
+    cursor: pointer;
+}
